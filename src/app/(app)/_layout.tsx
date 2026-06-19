@@ -1,4 +1,4 @@
-import useUserStore from '@/src/hooks/useUserStore';
+import useUserStore from '@/hooks/useUserStore';
 import { Stack } from 'expo-router';
 
 export default function RootNav() {

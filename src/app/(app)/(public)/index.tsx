@@ -2,7 +2,7 @@ import { Image, StyleSheet, View, Text, Linking } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 import { LinearGradient } from 'expo-linear-gradient';
 
-import { Fonts } from '@/src/constants/theme';
+import { Colors, Fonts } from '@/constants/theme';
 import AuthButton from './_components/authButton';
 import InfiniteScroll from './_components/infiniteScroll';
 import { Link } from 'expo-router';
@@ -79,7 +79,7 @@ export default function Index() {
                             href={'/(app)/(public)/otherOptions'}
                             asChild>
                             <AuthButton
-                                textColor="#666"
+                                textColor={Colors.muted}
                                 backgroundColor="#f0f0f0"
                                 title="Other Options"
                             />

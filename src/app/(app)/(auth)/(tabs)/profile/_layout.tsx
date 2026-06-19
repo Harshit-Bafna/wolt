@@ -1,4 +1,4 @@
-import { Fonts } from '@/src/constants/theme';
+import { Fonts } from '@/constants/theme';
 import { Stack } from 'expo-router';
 
 const Page = () => {

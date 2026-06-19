@@ -3,9 +3,9 @@ import { View, StyleSheet, Pressable, Text } from 'react-native';
 import Animated, { FadeInDown } from 'react-native-reanimated';
 
 import AuthButton from './_components/authButton';
-import { Colors, Fonts } from '@/src/constants/theme';
+import { Colors, Fonts } from '@/constants/theme';
 import Ionicons from '@expo/vector-icons/Ionicons';
-import useUserStore from '@/src/hooks/useUserStore';
+import useUserStore from '@/hooks/useUserStore';
 
 export default function OtherOptions() {
     const router = useRouter();

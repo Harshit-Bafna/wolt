@@ -1,7 +1,9 @@
-import useUserStore from '@/src/hooks/useUserStore';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { useHeaderHeight } from 'expo-router/build/react-navigation';
 import { Pressable, ScrollView, StyleSheet, Text, View } from 'react-native';
+
+import useUserStore from '@/hooks/useUserStore';
+import { Colors } from '@/constants/theme';
 
 export default function Profile() {
     const headerHeight = useHeaderHeight();
@@ -174,7 +176,7 @@ const styles = StyleSheet.create({
     favoritesText: {
         flex: 1,
         fontSize: 14,
-        color: '#666',
+        color: Colors.muted,
         lineHeight: 20,
     },
     favoritesIllustration: {
