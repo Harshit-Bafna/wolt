@@ -7,6 +7,26 @@ export default function Layout() {
                 name="(tabs)"
                 options={{ headerShown: false }}
             />
+            <Stack.Screen
+                name="(modal)/location"
+                options={{
+                    presentation: 'formSheet',
+                    sheetAllowedDetents: [0.7],
+                    title: '',
+                    sheetCornerRadius: 16,
+                    sheetGrabberVisible: true,
+                }}
+            />
+            <Stack.Screen
+                name="(modal)/filter"
+                options={{
+                    presentation: 'formSheet',
+                    sheetAllowedDetents: [0.7],
+                    title: '',
+                    sheetCornerRadius: 16,
+                    sheetGrabberVisible: true,
+                }}
+            />
         </Stack>
     );
 }
