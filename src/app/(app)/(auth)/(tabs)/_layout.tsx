@@ -13,13 +13,13 @@ export default function Layout() {
                 },
             }}>
             <Tabs.Screen
-                name="restaurants"
+                name="discovery"
                 options={{
-                    title: 'Restaurants',
+                    title: 'Discovery',
                     headerShown: false,
-                    tabBarIcon: ({ color, size }) => (
-                        <MaterialIcons
-                            name="restaurant"
+                    tabBarIcon: ({ color, size, focused }) => (
+                        <Ionicons
+                            name={focused ? 'compass' : 'compass-outline'}
                             color={color}
                             size={size}
                         />
@@ -28,12 +28,13 @@ export default function Layout() {
             />
 
             <Tabs.Screen
-                name="discovery"
+                name="restaurants"
                 options={{
-                    title: 'Discovery',
-                    tabBarIcon: ({ color, size, focused }) => (
-                        <Ionicons
-                            name={focused ? 'compass' : 'compass-outline'}
+                    title: 'Restaurants',
+                    headerShown: false,
+                    tabBarIcon: ({ color, size }) => (
+                        <MaterialIcons
+                            name="restaurant"
                             color={color}
                             size={size}
                         />

@@ -9,7 +9,8 @@
             "@/hooks/*": ["./src/hooks/*"],
             "@/services/*": ["./src/services/*"],
             "@/zustand/*": ["./src/zustand/*"],
-            "@/constants/*": ["./src/constants/*"]
+            "@/constants/*": ["./src/constants/*"],
+            "@/components/*": ["./src/components/*"]
         }
     },
     "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]

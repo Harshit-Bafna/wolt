@@ -83,7 +83,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#fff',
         marginVertical: 8,
         boxShadow: '0px 4px 2px -2px rgba(0, 0, 0, 0.2)',
-        elevation: 2,
     },
     categoryCardPressed: {
         opacity: 0.8,

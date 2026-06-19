@@ -7,14 +7,14 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import { Link } from 'expo-router';
 
-interface RestuarantHeaderProps {
+interface HeaderProps {
     title: string;
     scrollOffset: SharedValue<number>;
 }
 
 const SCOLL_THRESHOLD = 60;
 
-export default function RestaurantHeader({ title, scrollOffset }: RestuarantHeaderProps) {
+export default function Header({ title, scrollOffset }: HeaderProps) {
     const insets = useSafeAreaInsets();
 
     const header1Style = useAnimatedStyle(() => {
