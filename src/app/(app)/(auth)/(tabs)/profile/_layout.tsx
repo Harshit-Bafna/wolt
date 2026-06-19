@@ -9,7 +9,10 @@ const Page = () => {
                 options={{
                     headerLargeTitle: true,
                     headerTitle: 'Profile',
-                    headerTransparent: true,
+                    headerStyle: {
+                        backgroundColor: '#fff',
+                    },
+                    headerShadowVisible: false,
                     headerLargeTitleStyle: {
                         fontFamily: Fonts.brandBold,
                         fontWeight: '900',
