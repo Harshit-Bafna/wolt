@@ -5,6 +5,7 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { Fonts } from '@/src/constants/theme';
 import AuthButton from './_components/authButton';
 import InfiniteScroll from './_components/infiniteScroll';
+import { Link } from 'expo-router';
 
 export default function Index() {
     const openWebBrowser = () => {
@@ -74,11 +75,15 @@ export default function Index() {
                         />
                     </Animated.View>
                     <Animated.View entering={FadeInDown.delay(200)}>
-                        <AuthButton
-                            textColor="#666"
-                            backgroundColor="#f0f0f0"
-                            title="Other Options"
-                        />
+                        <Link
+                            href={'/(app)/(public)/otherOptions'}
+                            asChild>
+                            <AuthButton
+                                textColor="#666"
+                                backgroundColor="#f0f0f0"
+                                title="Other Options"
+                            />
+                        </Link>
                     </Animated.View>
                 </View>
 
