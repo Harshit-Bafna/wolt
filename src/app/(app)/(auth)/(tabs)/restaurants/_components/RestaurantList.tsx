@@ -1,11 +1,21 @@
 import { ActivityIndicator, Image, Pressable, StyleSheet, Text, View } from 'react-native';
+import { Link, useRouter } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 import { useRestaurants } from '@/hooks/useRestaurants';
 import { Colors } from '@/constants/theme';
-import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function RestaurantList() {
+    const router = useRouter();
+
     const { data: restaurants, isLoading, error } = useRestaurants();
+
+    const handlePress = (id: string) => {
+        router.push({
+            pathname: '/(app)/(auth)/(modal)/(restaurant)/[id]',
+            params: { id },
+        });
+    };
 
     if (isLoading) {
         return (
@@ -32,7 +42,9 @@ export default function RestaurantList() {
             {restaurants?.map((item) => {
                 return (
                     <View key={item.id}>
-                        <Pressable style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}>
+                        <Pressable
+                            style={({ pressed }) => [styles.card, pressed && styles.cardPressed]}
+                            onPress={() => handlePress(item.id.toString())}>
                             <Image
                                 source={item.image!}
                                 style={styles.image}

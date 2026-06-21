@@ -8,6 +8,10 @@ export default function Layout() {
                 options={{ headerShown: false }}
             />
             <Stack.Screen
+                name="(modal)/(restaurant)/[id]"
+                options={{ headerShown: false }}
+            />
+            <Stack.Screen
                 name="(modal)/location"
                 options={{
                     presentation: 'formSheet',
