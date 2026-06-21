@@ -11,6 +11,7 @@ import { Dish } from '@/data/restaurant_menu';
 import { MenuItem } from './MenuItem';
 import Svg, { Path } from 'react-native-svg';
 import { Ionicons } from '@expo/vector-icons';
+import RestaurantDetailsHeader from './RestaurantDetailsHeader';
 
 const { width } = Dimensions.get('window');
 const IMAGE_HEIGHT = 300;
@@ -91,6 +92,10 @@ export default function Page() {
             />
 
             <Animated.View style={[styles.whiteOverlay, overlayStyle]} />
+
+            <View style={{ zIndex: 10 }}>
+                <RestaurantDetailsHeader scrollOffset={scrollOffset} />
+            </View>
 
             <AnimatedSectionList
                 ref={sectionListRef}
